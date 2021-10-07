@@ -1,0 +1,25 @@
+{
+	"name": "angular-react-vue-benchmark",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"bootstrap": "npm run bootstrap-angular && npm run bootstrap-react && npm run bootstrap-vue",
+		"bootstrap-angular": "npm install --prefix angular-app",
+		"bootstrap-react": "npm install --prefix react-app",
+		"bootstrap-vue": "npm install --prefix vue-app",
+		"start-angular": "npm run --prefix angular-app start",
+		"start-react": "npm run --prefix react-app start",
+		"start-vue": "npm run --prefix vue-app serve",
+		"build": "npm run build-angular && npm run build-react && npm run build-vue",
+		"build-angular": "npm run --prefix angular-app build",
+		"build-react": "npm run --prefix react-app build",
+		"build-vue": "npm run --prefix vue-app build",
+		"serve-angular": "sirv angular-app/dist -s",
+		"serve-react": "sirv react-app/build -s",
+		"serve-vue": "sirv vue-app/dist -s"
+	},
+	"devDependencies": {
+		"prettier": "^2.4.1",
+		"sirv-cli": "^1.0.14"
+	}
+}
