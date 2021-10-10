@@ -1,0 +1,128 @@
+:root {
+	--main-color: #60cdff;
+	--background-color-level-1: #f9f9f9;
+	--background-color-level-2: #f5f5f5;
+	--background-color-level-3: #f0f0f0;
+	--background-color-level-4: #e6e6e6;
+	--color: #1a1a1a;
+	--border-color: #eaeaea;
+
+	--angular-color: #dd1b16;
+	--react-color: #61dbfb;
+	--vue-color: #41b883;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: var(--background-color-level-1);
+	color: var(--color);
+}
+
+section {
+	padding: 1em;
+	border-top-width: 1em;
+	border-top-style: solid;
+}
+
+app-root > section {
+	border-top-color: var(--angular-color);
+}
+
+#root > section {
+	border-top-color: var(--react-color);
+}
+
+#app > section {
+	border-top-color: var(--vue-color);
+}
+
+button {
+	padding: 1em;
+	border: 1px solid var(--border-color);
+	border-radius: 0.375em;
+	background: var(--background-color-level-1);
+	color: var(--color);
+	font-weight: bold;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+button:active {
+	background-color: var(--background-color-level-4);
+}
+
+button:not(:active):hover {
+	background-color: var(--background-color-level-3);
+}
+
+#actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	padding: 1em;
+	background: var(--background-color-level-2);
+	border: 1px solid var(--border-color);
+	border-radius: 0.5em;
+}
+
+table {
+	border-spacing: 0;
+}
+
+#results {
+	width: 100%;
+	min-height: calc(36px + 0.5em);
+	margin-top: 1em;
+	padding: 0.5em;
+	background: var(--background-color-level-2);
+	border: 1px solid var(--border-color);
+	border-radius: 0.5em;
+}
+
+#results tr > td {
+	padding: 0.5em 1em;
+	cursor: default;
+}
+
+#results tr:not(:last-of-type) > td {
+	border-bottom: 1px solid var(--border-color);
+}
+
+#results tr > td:not(:first-of-type) {
+	border-left: 1px solid var(--border-color);
+}
+
+#results tr > td:nth-child(1) {
+	width: 10%;
+	text-align: end;
+}
+
+#results tr > td:nth-child(3) {
+	width: 15%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#results tr > td:nth-child(2) > a,
+#results tr > td:nth-child(3) > a {
+	cursor: pointer;
+}
+
+#results tr > td:nth-child(3) > a {
+	font-weight: bold;
+}
+
+#results tr > td:nth-child(3) > a:hover {
+	color: var(--main-color);
+}
+
+#results tr.selected {
+	background: var(--background-color-level-4);
+}
